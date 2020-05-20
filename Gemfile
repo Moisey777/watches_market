@@ -17,7 +17,7 @@ gem 'oj_mimic_json'
 gem 'pq'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.3'
-gem 'sass-rails', '~> 5.0'
+gem 'sassc-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
@@ -39,12 +39,12 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'chromedriver-helper'
+  
   gem 'db-query-matchers'
   gem 'json_spec'
   gem 'launchy'
   gem 'rubocop', require: false
-  gem 'selenium-webdriver'
+  gem 'webdrivers'
   gem 'shoulda-matchers'
 end
 
