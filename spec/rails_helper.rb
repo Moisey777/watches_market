@@ -4,13 +4,15 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
-
-abort('The Rails environment is running in production mode!') if Rails.env.production?
+# Prevent database truncation if the environment is production
+if Rails.env.production?
+  abort('The Rails environment is running in production mode!')
+end
 require 'rspec/rails'
 require 'shoulda/matchers'
 require 'rspec/json_expectations'
 require 'database_cleaner'
-
+require 'rspec/expectations'
 
 begin
   ActiveRecord::Migration.maintain_test_schema!
@@ -20,11 +22,9 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 
 RSpec.configure do |config|
-
-  
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include FactoryBot::Syntax::Methods
-  config.before( scope :suite) do
+  config.before(:suite) do
     FactoryBot.find_definitions
   end
 
@@ -39,4 +39,3 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
-

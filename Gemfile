@@ -7,7 +7,9 @@ ruby '2.6.3'
 
 gem 'activestorage', '~> 5.2'
 gem 'bootstrap-sass', '~> 3.4.1'
+gem 'breadcrumbs_on_rails'
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
+gem 'meta-tags'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder'
@@ -39,13 +41,13 @@ end
 
 group :test do
   gem 'capybara'
-  
+
   gem 'db-query-matchers'
   gem 'json_spec'
   gem 'launchy'
   gem 'rubocop', require: false
-  gem 'webdrivers'
   gem 'shoulda-matchers'
+  gem 'webdrivers'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
