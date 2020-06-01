@@ -140,7 +140,6 @@ GEM
     parser (2.7.1.2)
       ast (~> 2.4.0)
     pg (1.2.3)
-    pq (0.0.2)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -299,8 +298,7 @@ DEPENDENCIES
   meta-tags
   oj
   oj_mimic_json
-  pg (~> 1.1)
-  pq
+  pg
   pry
   puma (~> 3.11)
   rails (~> 5.2.3)
