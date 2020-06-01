@@ -26,7 +26,6 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'database_cleaner'
   gem 'factory_bot'
-  gem 'pg'
   gem 'pry'
   gem 'rails-controller-testing'
   gem 'rb-readline'
