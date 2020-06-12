@@ -5,7 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
-gem 'activestorage', '~> 5.2'
+gem 'activestorage', '~> 6.0'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'breadcrumbs_on_rails'
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
@@ -18,7 +18,7 @@ gem 'oj'
 gem 'oj_mimic_json'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 3.11'
-gem 'rails', '~> 5.2.3'
+gem 'rails', '~> 6.0.3'
 gem 'sassc-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
