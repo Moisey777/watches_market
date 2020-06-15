@@ -39,5 +39,3 @@ Rails.application.config.assets.precompile += %w[easydrop.js]
 Rails.application.config.assets.precompile += %w[mem.js]
 Rails.application.config.assets.precompile += %w[responsive.js]
 Rails.application.config.assets.precompile += %w[flexs.js]
-
-

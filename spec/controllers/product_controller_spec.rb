@@ -1,17 +1,17 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Products", type: :controller do
-    describe 'GET #show' do
-        let(:product) { create :product}
+RSpec.describe 'Products', type: :controller do
+  describe 'GET #show' do
+    let(:product) { create :product }
 
-        subject { get :show, params: { id: product.id } }
+    subject { get :show, params: { id: product.id } }
 
-        context 'show product' do
-            it 'it render show view' do
-                is_expected.to render_template :show
-            end
-        end
-
+    context 'show product' do
+      it 'it render show view' do
+        is_expected.to render_template :show
+      end
     end
-
+  end
 end
