@@ -17,25 +17,8 @@
         <div class="col-md-9 single-main-left">
           <div class="sngl-top">
             <div class="col-md-5 single-top-left">
-  
-              <% unless @product.galleries == [] %>
-                <!-- FlexSlider -->
-                <div class="flexslider">
-                  <ul class="slides">
-                    <% @product.galleries.each do |item| %>
-                      <li data-thumb="<%= asset_path item['img'] %>">
-                        <div class="thumb-image">
-  
-                          <img src="<%= asset_path item['img'] %>" data-imagezoom="true"
-                               class="img-responsive" alt=""/>
-  
-                        </div>
-                      </li>
-                    <% end %>
-                  </ul>
-                </div>
-                <!-- FlexSlider -->
-              <% else %>
+
+              
   
                 <div class="flexslider">
                   <ul class="slides">
@@ -51,7 +34,7 @@
                   </ul>
                 </div>
   
-              <% end %>
+              
   
   
             </div>
@@ -109,14 +92,7 @@
   
                 </div>
   
-                <%=
-                  link_to 'ADD TO CART',
-                          cart_items_path,
-                          remote: true,
-                          data:      { method: :post , id: @product.id },
-                          class:    "add-cart item_add add-to-cart-link",
-                          id:       "productAdd"
-                %>
+                
   
               </div>
             </div>
@@ -342,6 +318,9 @@
         <div class="clearfix"> </div>
       </div>
     </div>
-  </div>
-  <!--end-single-->
-  <input type="hidden" value="<%= !current_user.nil? ? 88 : 99 %>" id="cart_access" />
+</div>
+  
+
+  
+  
+  
