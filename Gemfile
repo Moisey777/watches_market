@@ -4,8 +4,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
-gem 'ancestry'
 gem 'activestorage', '~> 5.2'
+gem 'ancestry'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'breadcrumbs_on_rails'
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'

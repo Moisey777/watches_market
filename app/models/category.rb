@@ -1,4 +1,6 @@
-class Category < ApplicationRecord
+# frozen_string_literal: true
 
-    has_many :products
+class Category < ApplicationRecord
+  has_ancestry
+  has_many :products
 end

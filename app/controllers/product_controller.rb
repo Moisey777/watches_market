@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 class ProductController < ApplicationController
-after_action :register_visit, only: [:show]
+  after_action :register_visit, only: [:show]
 
   def show
     @product = Product.find(params[:id])
-    
+
     set_page_options
   end
 
@@ -33,4 +33,3 @@ after_action :register_visit, only: [:show]
     add_breadcrumb 'Home', :root_path, title: 'Home'
   end
 end
-
