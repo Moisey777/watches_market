@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe SearchControllerController, type: :controller do
+RSpec.describe SearchController, type: :controller do
     render_views
     describe 'GET #index' do
         let!(:product) { create(:product, title: 'Casio LED') }

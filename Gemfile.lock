@@ -291,6 +291,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner
   db-query-matchers
+  execjs
   factory_bot
   faker!
   jbuilder
