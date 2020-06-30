@@ -16,6 +16,7 @@ before_script:
   - docker-compose up -d --build
 
 script:
+  - docker-compose logs
   - docker-compose exec app bundle exec rake db:setup db:migrate
 
 after_script:
