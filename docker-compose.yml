@@ -12,8 +12,7 @@ services:
       - "3000:3000"
     volumes:
       - .:/watch-rails
-    env_file: 
-      - .env
+    env_file: .env
     environment:
       RAILS_ENV: development
 
