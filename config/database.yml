@@ -12,8 +12,8 @@ default: &default
 
 development:
 #  <<: *default
-  database: watches-market_development
+  database: "watches-market_development"
 
 test:
 #  <<: *default
-  database: watches-market_test
+  database: "watches-market_test"
