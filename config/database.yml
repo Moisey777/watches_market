@@ -12,8 +12,8 @@ default: &default
 
 development:
 #  <<: *default
-  database: <%= ENV['DATABASE_NAME'] %>
+  database: watches-market_development
 
 test:
 #  <<: *default
-  database: <%= ENV['DATABASE_NAME_TEST'] %>
+  database: watches-market_test
