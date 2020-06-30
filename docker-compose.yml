@@ -12,12 +12,16 @@ services:
       - "3000:3000"
     volumes:
       - .:/watch-rails
-    env_file: .env
+    env_file: 
+      - .env
     environment:
       RAILS_ENV: development
 
   database:
     image: postgres:latest
     volumes:
-      - .db_data:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes: 
+  db_data:
