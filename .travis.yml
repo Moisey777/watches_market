@@ -17,7 +17,7 @@ before_script:
 
 script:
   - docker-compose logs
-  - docker-compose exec app RAILS_ENV=development bundle exec rake db:setup db:migrate
+  - docker-compose exec app bundle exec rake db:setup db:migrate
 
 after_script:
   - docker-compose down
