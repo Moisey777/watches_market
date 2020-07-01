@@ -2,7 +2,6 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV['DATABASE_NAME'] %>
   username: <%= ENV['DATABASE_USER'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
   port: <%= ENV['DATABASE_PORT'] || '5432' %>
@@ -12,7 +11,9 @@ default: &default
  
 
 development:
-#  <<: *default
+  <<: *default
+  database: <%= ENV['DATABASE_NAME'] %>
 
 test:
-#  <<: *default
+  <<: *default
+  database: "watches_test"
