@@ -14,7 +14,7 @@ services:
       - .:/watch-rails
     env_file: .env
     environment:
-      - RAILS_ENV=development
+      RAILS_ENV: development
 
   database:
     image: postgres:latest
