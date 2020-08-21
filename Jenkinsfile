@@ -1,14 +1,11 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Dockerfile'
-    }
-
-  }
+  agent none
   stages {
     stage('Build') {
       steps {
-        build(job: 'Build', propagate: true)
+        build 'Build'
+        sh '''docker build -t watch-market:latest .
+ '''
       }
     }
 
