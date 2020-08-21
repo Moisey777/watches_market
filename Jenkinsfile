@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        build 'Build'
+        build(job: 'Build', propagate: true)
         sh '''docker build -t watch-market:latest .
  '''
       }
