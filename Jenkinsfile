@@ -1,10 +1,10 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('Build') {
       steps {
-        build 'Build'
-        sh 'docker build -t watch-market:latest .'
+        sh '''docker build -t watch-market:${BUILD_NUMBER} .
+docker tag watch-market:${BUILD_NUMBER} watch-market:latest'''
       }
     }
 
