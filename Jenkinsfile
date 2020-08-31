@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
+        sh 'git pull'
         sh '''docker-compose up -d --build
 docker tag watch-market:${BUILD_NUMBER} watch-market:latest'''
       }
