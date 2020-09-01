@@ -12,7 +12,8 @@ pipeline {
     stage('Deploy') {
       steps {
         sh '''docker-compose exec app bundle exec rake db:setup db:migrate
-docker-compose logs'''
+docker-compose logs
+docker-compose down'''
       }
     }
 
