@@ -6,6 +6,8 @@ pipeline {
         sh 'git pull'
         sh '''docker-compose up -d --build
 '''
+        sh '''pip uninstall docker-py; pip install -U docker-compose
+'''
       }
     }
 
